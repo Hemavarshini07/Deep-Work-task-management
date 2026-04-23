@@ -1,0 +1,12 @@
+import json
+import os
+import sys
+
+sys.path.append(os.getcwd())
+
+from backend.main import app
+
+with open("openapi.json", "w") as f:
+    json.dump(app.openapi(), f, indent=2)
+
+print("openapi.json generated successfully.")

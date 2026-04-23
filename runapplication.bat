@@ -1,0 +1,9 @@
+@echo off 
+echo Starting backend... 
+start cmd /k "call env\Scripts\activate && python main.py"
+ 
+echo Starting frontend... 
+start cmd /k "cd frontend && npm start"
+
+echo Applications are starting in separate windows...
+pause
